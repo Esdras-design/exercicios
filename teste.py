@@ -1,0 +1,35 @@
+import pandas as pd
+dados = pd.Series([5, 6, 7, 2, 3, 9, 10, 8, 6, 9])
+media = dados.mean()
+print(f"Média: {media}")
+#------------------------------------------------------------------------
+
+mediana = dados.median()
+print(f"Mediana: {mediana}")
+
+#------------------------------------------------------------------------
+
+moda = dados.mode()
+print(f"Moda: {moda}")
+
+#------------------------------------------------------------------------
+
+Q1 = dados.quantile(0.25)
+print(f"Primeiro quartil (Q1): {Q1}")
+
+
+P90 = dados.quantile(0.90)
+print(f"Percentil 90 (P90): {P90}")
+
+#-----------------------------------------------------------------------
+
+desvio_padrao = dados.std()
+print(f"Desvio padrão: {desvio_padrao}")
+
+#-----------------------------------------------------------------------
+
+print(f"Mínimo: {dados.min()}")
+print(f"máximo: {dados.max()}")
+print(f"Amplitude: {dados.max() - dados.min()}")
+
+print(dados.describe(percentiles=[.25, .5, .9]))
